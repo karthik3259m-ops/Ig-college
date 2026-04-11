@@ -1,4 +1,4 @@
-name: Organized Batch Scraper (Size Limit)
+name: Organized Batch Scraper (Archive Fix)
 on: [workflow_dispatch]
 
 jobs:
@@ -13,22 +13,28 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Fetch, Filter Size, and Batch Push
+      - name: Fetch, Filter, and Archive Scrape
         run: |
-          # Create organized directory structure
+          # 1. Create directory structure
           mkdir -p Faculty Syllabus Timetables Events Images Archives Others
           
-          # Fetching links for common document, image, and archive formats
-          # Target Site: igceng.com
+          # 2. Get list of files from Wayback CDX API
+          # We use "original" to get the base URL, then we will modify it to download from Archive
           curl -s "https://web.archive.org/cdx/search/cdx?url=igceng.com/*&output=text&fl=original" \
           | grep -E "\.(jpg|jpeg|png|gif|pdf|docx|doc|xls|xlsx|rar|zip|7z)$" \
           | sort -u > all_links.txt
           
           count=0
-          while read -r url; do
-            lower_url=$(echo "$url" | tr '[:upper:]' '[:lower:]')
+          while read -r original_url; do
+            # Fix double slashes and convert to lowercase for sorting
+            clean_url=$(echo "$original_url" | sed 's|//|/|g' | sed 's|https:/|https://|g')
+            lower_url=$(echo "$clean_url" | tr '[:upper:]' '[:lower:]')
             
-            # Logic for folder sorting
+            # 3. Construct the Wayback Direct Download URL
+            # Using 'id_' tells Wayback to serve the raw file without the toolbar
+            wayback_download_url="https://web.archive.org/web/2026id_/$clean_url"
+
+            # 4. Sorting Logic
             if [[ "$lower_url" == *"dr-"* || "$lower_url" == *"resume"* || "$lower_url" == *"profile"* ]]; then
               folder="Faculty"
             elif [[ "$lower_url" == *"syllabus"* ]]; then
@@ -45,18 +51,17 @@ jobs:
               folder="Others"
             fi
 
-            # Download the file (ignoring certificate errors for older archives)
-            wget -nv -nc -P "$folder/" "$url" --no-check-certificate || continue
+            # 5. Download with custom filename to avoid 404/naming conflicts
+            filename=$(basename "$clean_url")
             
-            # --- SIZE CHECK ---
-            filename=$(basename "$url")
-            # Ensure the file exists before checking size
+            echo "Downloading: $filename from Archive..."
+            wget -nv -nc -O "$folder/$filename" "$wayback_download_url" --no-check-certificate || continue
+            
+            # 6. Size Check (90MB Limit)
             if [ -f "$folder/$filename" ]; then
               filesize=$(stat -c%s "$folder/$filename")
-              
-              # GitHub soft limit is 100MB. Setting limit to 90MB for safety margin.
               if [ $filesize -gt 94371840 ]; then
-                echo "Skipping $filename ($filesize bytes) - Too large for GitHub!"
+                echo "Skipping $filename - Too large!"
                 rm "$folder/$filename"
                 continue
               fi
@@ -64,7 +69,7 @@ jobs:
 
             count=$((count + 1))
             
-            # Batching commits every 50 files to prevent timeout/push errors
+            # 7. Batch Commits (every 50 files)
             if [ $((count % 50)) -eq 0 ]; then
               echo "Pushing batch of $count files..."
               git config user.name "Wayback Bot"
@@ -75,10 +80,9 @@ jobs:
             fi
           done < all_links.txt
 
-          # Final push for remaining files
+          # Final Sync
           git config user.name "Wayback Bot"
           git config user.email "actions@github.com"
           git add .
-          git commit -m "Final batch upload" || true
+          git commit -m "Final cleanup and upload" || true
           git push origin main
-

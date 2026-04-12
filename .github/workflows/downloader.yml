@@ -1,0 +1,39 @@
+name: Batch Data Scraper
+
+on:
+  workflow_dispatch: # Allows you to start it manually
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Create Download Directory
+        run: mkdir -p downloads
+
+      - name: Filter and Download in Batches
+        run: |
+          # 1. Filter out images and keep unique URLs
+          grep -Ev "\.(jpg|jpeg|png|gif|svg|ico|webp)$" all_urls.txt > filtered_urls.txt
+          
+          # 2. Batch Processing: Download files 1 by 1
+          # Using a sleep delay to act 'human' and avoid WAF triggers
+          while IFS= read -r url; do
+            echo "Fetching: $url"
+            filename=$(basename "$url")
+            
+            # Download via Wayback to ensure we get the data without the 403 wall
+            # Using -q for quiet and -nc to skip existing files
+            wget -q -nc "http://web.archive.org/save/$url" -P ./downloads/ || echo "Failed to grab $url"
+            
+            # Batch delay: Wait 2 seconds between files to keep it stable
+            sleep 2
+          done < filtered_urls.txt
+
+      - name: Upload Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: igc-scraped-data
+          path: downloads/

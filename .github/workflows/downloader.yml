@@ -6,34 +6,44 @@ on:
 jobs:
   download:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Allows the bot to upload files to your repo
+    
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Create Download Directory
-        run: mkdir -p downloads
-
-      - name: Filter and Download in Batches
+      - name: Generate URL List and Download
         run: |
-          # 1. Filter out images and keep unique URLs
-          grep -Ev "\.(jpg|jpeg|png|gif|svg|ico|webp)$" all_urls.txt > filtered_urls.txt
+          mkdir -p scraped_data
           
-          # 2. Batch Processing: Download files 1 by 1
-          # Using a sleep delay to act 'human' and avoid WAF triggers
+          echo "Step 1: Fetching all URLs from Wayback Machine..."
+          curl -s "http://web.archive.org/cdx/search/cdx?url=igceng.com/*&output=text&fl=original" | sort -u > raw_urls.txt
+          
+          echo "Step 2: Filtering out images..."
+          # Excludes jpg, png, gif, svg, ico, webp
+          grep -Ev "\.(jpg|jpeg|png|gif|svg|ico|webp)$" raw_urls.txt > filtered_urls.txt
+          
+          echo "Step 3: Starting Batch Download..."
           while IFS= read -r url; do
+            # Skip empty lines
+            [ -z "$url" ] && continue
+            
             echo "Fetching: $url"
-            filename=$(basename "$url")
             
-            # Download via Wayback to ensure we get the data without the 403 wall
-            # Using -q for quiet and -nc to skip existing files
-            wget -q -nc "http://web.archive.org/save/$url" -P ./downloads/ || echo "Failed to grab $url"
+            # Using wget with a real Browser User-Agent to help bypass blocks
+            # Saving to the scraped_data folder
+            wget -q -nc -U "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+            "http://web.archive.org/save/$url" -P ./scraped_data/ || echo "Failed: $url"
             
-            # Batch delay: Wait 2 seconds between files to keep it stable
-            sleep 2
+            # 3 second delay between files for safety
+            sleep 3
           done < filtered_urls.txt
 
-      - name: Upload Results
-        uses: actions/upload-artifact@v4
-        with:
-          name: igc-scraped-data
-          path: downloads/
+      - name: Commit and Push to Repo
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add scraped_data/
+          git commit -m "Automated batch download of IGC data [skip ci]" || echo "No changes to commit"
+          git push

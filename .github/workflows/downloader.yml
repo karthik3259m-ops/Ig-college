@@ -1,48 +1,69 @@
 name: Batch Data Scraper
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Allows you to start it manually from the Actions tab
 
 jobs:
   download:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # Essential for the bot to save files back to your repo
     
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Fetch and Filter URLs
+      - name: Fetch and Clean URL List
         run: |
           mkdir -p scraped_data
-          echo "Fetching from Wayback..."
-          # Fetch URLs, filter for actual http links, remove images
+          echo "Step 1: Fetching all URLs from Wayback Machine..."
+          # Get URLs and sort them
           curl -s "http://web.archive.org/cdx/search/cdx?url=igceng.com/*&output=text&fl=original" | sort -u > raw.txt
-          grep "^http" raw.txt | grep -Ev "\.(jpg|jpeg|png|gif|svg|ico|webp)$" > filtered_urls.txt
-          echo "Found $(wc -l < filtered_urls.txt) files to download."
+          
+          echo "Step 2: Cleaning and filtering..."
+          # 1. Only keep actual http links
+          # 2. Fix double slashes (com// to com/)
+          # 3. Filter out common image formats
+          grep "^http" raw.txt | sed 's|com//|com/|g' | grep -Ev "\.(jpg|jpeg|png|gif|svg|ico|webp)$" > filtered_urls.txt
+          
+          echo "Found $(wc -l < filtered_urls.txt) valid links."
 
       - name: Batch Download
         run: |
-          # Only process the first 50 to prevent GitHub from killing the job
+          # Limit to 50 files per run to avoid timeout and IP bans
           head -n 50 filtered_urls.txt > batch.txt
           
           while IFS= read -r url; do
-            echo "Processing: $url"
-            # We use -L to follow redirects and -U to look like a browser
-            wget -q -nc -L -U "Mozilla/5.0" "$url" -P ./scraped_data/ || echo "Skipping failed download"
-            sleep 2
+            [ -z "$url" ] && continue
+            echo "Downloading: $url"
+            
+            # -q: quiet
+            # -nc: no-clobber (don't download same file twice)
+            # -L: follow redirects
+            # -U: Browser User-Agent
+            # --referer: Makes it look like you are clicking from their homepage
+            wget -q -nc -L \
+              --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" \
+              --referer="http://igceng.com/" \
+              --timeout=15 \
+              --tries=2 \
+              "$url" -P ./scraped_data/ || echo "Skipping: $url (Failed)"
+            
+            # The 'Batch' pause - 3 seconds between files
+            sleep 3
           done < batch.txt
 
-      - name: Upload to Repository
+      - name: Save Data to Repository
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
           git add scraped_data/
-          # Only commit if there are actually new files
+          
+          # Only commit if there is actually new data
           if git diff --staged --quiet; then
-            echo "No new data found."
+            echo "No new files to commit."
           else
-            git commit -m "Add scraped batch data"
+            git commit -m "Automated batch download: $(date +'%Y-%m-%d')"
             git push
           fi

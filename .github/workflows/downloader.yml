@@ -1,49 +1,35 @@
-name: Batch Data Scraper
-
-on:
-  workflow_dispatch: # Allows you to start it manually
-
-jobs:
-  download:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write # Allows the bot to upload files to your repo
-    
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Generate URL List and Download
+- name: Generate URL List and Download
         run: |
           mkdir -p scraped_data
           
-          echo "Step 1: Fetching all URLs from Wayback Machine..."
-          curl -s "http://web.archive.org/cdx/search/cdx?url=igceng.com/*&output=text&fl=original" | sort -u > raw_urls.txt
+          echo "Step 1: Fetching URLs (with retry)..."
+          # Added --retry and a check to see if the output is actually a list
+          curl --retry 3 --retry-delay 5 -s "http://web.archive.org/cdx/search/cdx?url=igceng.com/*&output=text&fl=original" | sort -u > raw_urls.txt
           
-          echo "Step 2: Filtering out images..."
-          # Excludes jpg, png, gif, svg, ico, webp
-          grep -Ev "\.(jpg|jpeg|png|gif|svg|ico|webp)$" raw_urls.txt > filtered_urls.txt
-          
-          echo "Step 3: Starting Batch Download..."
-          while IFS= read -r url; do
-            # Skip empty lines
-            [ -z "$url" ] && continue
-            
-            echo "Fetching: $url"
-            
-            # Using wget with a real Browser User-Agent to help bypass blocks
-            # Saving to the scraped_data folder
-            wget -q -nc -U "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
-            "http://web.archive.org/save/$url" -P ./scraped_data/ || echo "Failed: $url"
-            
-            # 3 second delay between files for safety
-            sleep 3
-          done < filtered_urls.txt
+          # SAFETY CHECK: If the file contains "<html>", the API failed.
+          if grep -q "<html>" raw_urls.txt; then
+            echo "Error: Wayback API returned an error page instead of URLs. Stopping to save time."
+            exit 1
+          fi
 
-      - name: Commit and Push to Repo
-        run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions@github.com"
-          git add scraped_data/
-          git commit -m "Automated batch download of IGC data [skip ci]" || echo "No changes to commit"
-          git push
+          echo "Step 2: Filtering out images..."
+          # Only keep lines that start with http (actual URLs) and aren't images
+          grep "^http" raw_urls.txt | grep -Ev "\.(jpg|jpeg|png|gif|svg|ico|webp)$" > filtered_urls.txt
+          
+          if [ ! -s filtered_urls.txt ]; then
+            echo "No valid URLs found to download."
+            exit 0
+          fi
+
+          echo "Step 3: Starting Batch Download..."
+          # Limit to first 20 files for this run to make sure it works
+          head -n 20 filtered_urls.txt > test_batch.txt
+          
+          while IFS= read -r url; do
+            echo "Fetching: $url"
+            # Use --timeout to prevent the whole action from hanging
+            wget -q -nc --timeout=15 -U "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+            "$url" -P ./scraped_data/ || echo "Failed: $url"
+            
+            sleep 3
+          done < test_batch.txt

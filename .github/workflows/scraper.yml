@@ -15,83 +15,94 @@ jobs:
 
       - name: Fetch, Filter, and Archive Scrape
         run: |
-          # 1. Setup Directories
+          # 1. Setup Base Directories
           mkdir -p Faculty Syllabus Timetables Events Images Archives Others
           
-          # 2. Get list of files
-          curl -s "https://web.archive.org/cdx/search/cdx?url=igceng.com/*&output=text&fl=original" \
+          # 2. Get list of files WITH TIMESTAMPS (to organize by date)
+          # fl=timestamp,original gives us the date and the link
+          curl -s "https://web.archive.org/cdx/search/cdx?url=igceng.com/*&output=text&fl=timestamp,original" \
           | grep -E "\.(jpg|jpeg|png|gif|pdf|docx|doc|xls|xlsx|rar|zip|7z)$" \
-          | sort -u > all_links.txt
+          | sort -u > all_data.txt
 
-          if [ ! -s all_links.txt ]; then
-            echo "No links found! Exiting."
+          if [ ! -s all_data.txt ]; then
+            echo "No data found!"
             exit 1
           fi
           
           count=0
-          while read -r original_url; do
+          while read -r timestamp original_url; do
+            # Extract year and month from timestamp (YYYYMMDDHHMMSS)
+            year=$(echo "$timestamp" | cut -c 1-4)
+            month=$(echo "$timestamp" | cut -c 5-6)
+            
             clean_url=$(echo "$original_url" | sed 's|:80||g')
             lower_url=$(echo "$clean_url" | tr '[:upper:]' '[:lower:]')
-            wayback_download_url="https://web.archive.org/web/id_/$clean_url"
+            
+            # Construct direct download URL using the specific timestamp to get THAT version
+            wayback_download_url="https://web.archive.org/web/${timestamp}id_/$clean_url"
 
-            # Folder logic
+            # Folder logic (adding Year/Month for separation)
             if [[ "$lower_url" == *"dr-"* || "$lower_url" == *"resume"* || "$lower_url" == *"profile"* ]]; then
-              folder="Faculty"
+              type_folder="Faculty"
             elif [[ "$lower_url" == *"syllabus"* ]]; then
-              folder="Syllabus"
+              type_folder="Syllabus"
             elif [[ "$lower_url" == *"time-table"* || "$lower_url" == *"timetable"* ]]; then
-              folder="Timetables"
+              type_folder="Timetables"
             elif [[ "$lower_url" == *"event"* || "$lower_url" == *"invitation"* || "$lower_url" == *"circular"* ]]; then
-              folder="Events"
+              type_folder="Events"
             elif [[ "$lower_url" =~ \.(jpg|jpeg|png|gif)$ ]]; then
-              folder="Images"
+              type_folder="Images"
             elif [[ "$lower_url" =~ \.(rar|zip|7z)$ ]]; then
-              folder="Archives"
+              type_folder="Archives"
             else
-              folder="Others"
+              type_folder="Others"
             fi
 
+            # Final structure: Type/Year-Month/filename
+            target_dir="$type_folder/$year-$month"
+            mkdir -p "$target_dir"
+            
             filename=$(basename "$clean_url" | cut -d? -f1)
-            echo "Attempting: $filename"
             
-            # Rate limit protection (1-2 second delay)
-            sleep $(( ( RANDOM % 2 )  + 1 ))
+            # 3. Rate Limit Protection (Increased sleep due to your 404/Refused errors)
+            sleep $(( ( RANDOM % 3 )  + 2 ))
             
-            # Download with Browser User-Agent
-            wget -nv -nc -O "$folder/$filename" "$wayback_download_url" \
-              --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36" \
-              --no-check-certificate --tries=3 --timeout=20 || continue
+            echo "Downloading: $target_dir/$filename"
+            wget -nv -nc -O "$target_dir/$filename" "$wayback_download_url" \
+              --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+              --no-check-certificate --tries=3 --timeout=15 || continue
             
-            # Verify file is not an HTML error
-            if [ -f "$folder/$filename" ]; then
-              if head -c 100 "$folder/$filename" | grep -iq "<html>"; then
-                rm "$folder/$filename"
+            # 4. Verify File
+            if [ -f "$target_dir/$filename" ]; then
+              if head -c 100 "$target_dir/$filename" | grep -iq "<html>"; then
+                rm "$target_dir/$filename"
                 continue
               fi
-
-              # Size check (95MB for safety)
-              filesize=$(stat -c%s "$folder/$filename")
-              if [ $filesize -gt 99614720 ]; then
-                rm "$folder/$filename"
+              
+              # Size check (95MB)
+              filesize=$(stat -c%s "$target_dir/$filename")
+              if [ $filesize -gt 99614720 ] || [ $filesize -lt 100 ]; then
+                rm "$target_dir/$filename"
                 continue
               fi
               
               count=$((count + 1))
             fi
 
-            # 3. BATCH UPLOAD: EVERY 50 FILES
+            # 5. BATCH UPLOAD: EVERY 50 FILES
             if [ $count -gt 0 ] && [ $((count % 50)) -eq 0 ]; then
               echo "Reaching 50 files. Pushing batch..."
               git config user.name "Wayback Bot"
               git config user.email "actions@github.com"
               git add .
-              git commit -m "Batch upload: $count files" || true
-              # Rebase helps prevent push conflicts if the workflow runs long
+              # Force reset to remote to avoid the "Merge Conflict" crash
+              git fetch origin main
+              git commit -m "Batch upload: $count files (Dated Archive)" || true
               git push origin main || (git pull --rebase origin main && git push origin main)
             fi
-          done < all_links.txt
+          done < all_data.txt
 
-          # Final Sync for any remaining files (less than 50)
+          # Final Sync
           if [ $count -gt 0 ]; then
             git config user.name "Wayback Bot"
             git config user.email "actions@github.com"
@@ -99,4 +110,3 @@ jobs:
             git commit -m "Final sync: $count total files" || true
             git push origin main
           fi
-

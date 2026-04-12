@@ -1,0 +1,1000 @@
+         INDRA GANESAN COLLEGE OF ENGINEERING -
+MODULE
+
+ eCOE
+INDRA GANESAN COLLEGE OF ENGINEERING - DESCRIPTION OF INFORMATIO
+                              DESCRIPTION
+
+   Regulation Copy
+   Student checklist - Name, A‹ldress,Reg.No., Photo etc.
+   Curriculam Courses (title of papers, sub code, semester etc.)
+   Student Registration & confirmation
+   Previous Result Data
+   Examination Fee details
+   End-of-semester Examination applicatlon form.
+   CIA Examination
+   Attendance eligibility
+   Theory Examination Time table
+   ESE Practical /Project Time Table
+   Hall allotment
+   Hall Locator
+   Hall Ticket
+   Nominal Roll
+   Nominal Galley
+   QP Settings
+   Q.P. setting from question bank Allocation of subjects to the students
+   Hall Type Format
+   Individual Mark sheet and Consolidated Mark sheet Format (Soft copy and Original Hard copy can be written as sample) for alig
+   QP- Hall wise Bundling Details
+   Attendance Management
+   QP Statistics
+   Theory Dispatch Details
+   Answer Scripts Bundling Details
+   Absentees List
+   Dummy Number Process
+   Practical /Project mark entry
+   Theory Mark entry
+   ESE Mark Entry with Report
+   Automatic Practical /Project Mark entry by Individual Examiner login
+   Automatic Theory Mark entry by Individual Internal /External Examiner login
+   Valuation Management in Examiner Seperate login
+   Moderation Management
+   Revaluation,Photocopy & Retotalling
+   Result Report & Consolidated Report
+   Semester Mark sheet with Signature Copy
+   Consolidated Mark sheet with Signature Copy
+   Arrear Report
+   Statistic Report (Regular and arrear)
+Malpractice Process
+Provisional Details
+Broad sheet
+QP Mark Entry with Report (Excel /PDF)
+Improvement examination Management
+AU Relative Grading
+Normalization
+Rank Report with CGPA Topper List
+NAAC Report
+Result Days Rerport & Start date end date report
+Online Result Publishing
+Online Exam Fees Payment process
+Analysis Report (Course ,Department , Subject )
+Annexure Report (Softcopy & Hardcopy Report) with Content Report
+Supplementary Management
+N TO BE COLLECTED
+     RECEIVED/NOT RECEIVED
+
+
+     (Sheet Name 1.1 Student)
+     (Sheet Name 1.2 Curriculam Courses)
+     (Sheet Name 1.3. Elective Registration)
+     (Sheet Name 1.4 Old data)
+ Regulation      Batch              Degree-Branch             Roll Number    Register Number     UMIS No.
+
+2021-FT       2021       B. TECH. - Information Technology   811221205001   811221205001       9001081143
+2021-FT       2021       B. TECH. - Information Technology   811221205003   811221205003       9000653332
+2021-FT       2021       B. TECH. - Information Technology   811221205004   811221205004       9000467615
+2021-FT       2021       B. TECH. - Information Technology   811221205005   811221205005       9000691325
+2021-FT       2021       B. TECH. - Information Technology   811221205009   811221205009       9000655095
+2021-FT       2021       B. TECH. - Information Technology   811221205010   811221205010       9000627527
+2021-FT       2021       B. TECH. - Information Technology   811221205013   811221205013       9001080840
+2021-FT       2021       B. TECH. - Information Technology   811221205014   811221205014       9000618456
+2021-FT       2021       B. TECH. - Information Technology   811221205015   811221205015       9000629601
+2021-FT       2021       B. TECH. - Information Technology   811221205016   811221205016       9001083708
+2021-FT       2021       B. TECH. - Information Technology   811221205017   811221205017       9000653158
+2021-FT       2021       B. TECH. - Information Technology   811221205018   811221205018       9001081293
+2021-FT       2021       B. TECH. - Information Technology   811221205019   811221205019       9000469051
+2021-FT       2021       B. TECH. - Information Technology   811221205020   811221205020       9000653060
+2021-FT       2021       B. TECH. - Information Technology   811221205021   811221205021       9000641596
+2021-FT       2021       B. TECH. - Information Technology   811221205022   811221205022       9001083525
+2021-FT       2021       B. TECH. - Information Technology   811221205023   811221205023       9000610238
+2021-FT       2021       B. TECH. - Information Technology   811221205024   811221205024       9000642093
+2021-FT       2021       B. TECH. - Information Technology   811221205025   811221205025       9000640028
+2021-FT       2021       B. TECH. - Information Technology   811221205029   811221205029       9000463431
+2021-FT       2021       B. TECH. - Information Technology   811221205032   811221205032       9000618304
+2021-FT       2021       B. TECH. - Information Technology   811221205033   811221205033       9000641775
+2021-FT       2021       B. TECH. - Information Technology   811221205034   811221205034       9000626060
+2021-FT       2021       B. TECH. - Information Technology   811221205035   811221205035       9001083748
+2021-FT       2021       B. TECH. - Information Technology   811221205036   811221205036       9001082385
+2021-FT       2021       B. TECH. - Information Technology   811221205037   811221205037       9001081502
+2021-FT       2021       B. TECH. - Information Technology   811221205038   811221205038       9000615629
+2021-FT       2021       B. TECH. - Information Technology   811221205039   811221205039       9001081346
+2021-FT       2021       B. TECH. - Information Technology   811221205041   811221205041       9001082037
+2021-FT       2021       B. TECH. - Information Technology   811221205042   811221205042       9000655615
+2021-FT       2021       B. TECH. - Information Technology   811221205043   811221205043       9001083842
+2021-FT       2021       B. TECH. - Information Technology   811221205044   811221205044       9001081438
+2021-FT       2021       B. TECH. - Information Technology   811221205045   811221205045       9000638377
+2021-FT   2021   B. TECH. - Information Technology   811221205046   811221205046   9000611180
+2021-FT   2021   B. TECH. - Information Technology   811221205048   811221205048   9000617736
+2021-FT   2021   B. TECH. - Information Technology   811221205301   811221205301   9001083719
+2021-FT   2021   B. TECH. - Information Technology   811221205701   811221205701   9000577671
+2021-FT   2021   B. TECH. - Information Technology   811221205702   811221205702   9001081954
+     First Name   Last Name   Gender    Date(dd-mm-yyyy)                 Parent Name    Parent Phone
+
+ANGEL EPSIBA      A           Female   12/22/2003          AROCKIA DASS A              9789483728
+ASARUDHEEN        K           Male     8/24/2004           KADHAR B                    9500394650
+BARAKKATH NISHA   S           Female   6/25/2024           SAHUBAR SADIQ A             8220233946
+BRUNDHA           P           Female   9/21/2003           PANNEERSELAVAM S            6379668178
+DINESH            M           Male     1/16/2004           MADHANA GOPAL A             8667817188
+GNANASAMUEL       A           Male     5/13/2004           KALIYAMOORTHY A             6384961957
+JAISURYA          K           Male     5/13/2004           KALIYAMOORTHY A             6384961957
+JENANI            R           Female   11/1/2003           RAGAVAN K                   8870149696
+KANNAN            M           Male     5/27/2004           MURUGESAN A                 9003829950
+KARTHIKRAJA       M           Male     4/5/2003            MOOKKAN A                   7868854184
+KAVIN             J           Male     10/19/2003          JAYAKANNAN P                9786934590
+KAYATHRI          S           Female   5/29/2004           SIVASUBRAMANIAN G           8110028041
+KISHORE           M           Male     1/22/2004           MURUGAN C                   6374113587
+LALITHA           K           Female   3/6/2004            KUMAR L                     9788366798
+MADHAN            S           Male     12/22/1997          SARAVANAN S                 7448541159
+MANIKANDAN        M           Male     12/28/2003          MUTHUVEERAN S               8754990174
+MOHAMED ANAS      J           Male     4/17/2003           JAHIR HUSSSAIN P            8754001387
+MOHAMED ASLAM     S           Male     12/6/2003           SAMSUDEEN M                 9659452271
+MONIKA SRI        B           Female   2/8/2004            Balakrishnan .M             6385473508
+PRASANNA          M           Male     6/1/2004            MAHENDRAN M                 9943613171
+SANTHOSH KUMAR    P           Male     4/5/2004            PERIYASAMY S                9659304551
+SATHISH KANNAN    S           Male     2/23/2003           SAKTHIVEL. S                6380576503
+SEBASTHIYAN       S           Male     4/26/2004           SAVARIMUTHU A               8098966167
+STEPHEN           S           Male     7/1/2002            SEBASTIAN A                 9087508260
+SUBASHINI         M           Female   1/1/2004            MANI A                      8110995883
+SUBASRI           M           Female   10/22/2003          MOHANRAJ S C                8903560280
+SUJHIN            R           Male     2/17/2004           RAMESH S                    8838355940
+SUMITHA           A           Female   6/17/2002           AYYAPPA GK                  9363570195
+SURYA JETLY       T           Male     11/5/2003           Thomas A                    9655901131
+UDHAYA HARISH     B           Male     4/13/2004           BABU U                      8903995435
+UDHAYANITHI       C           Male     7/3/2004            CHARLES M                   9751328110
+UMA MAHESWARI     R           Female   3/27/2004           RAVIKUMAR V                 9952134943
+VANITHA           G           Female   2/9/2004            GANESAN S                   9629435153
+VIDHYA BHARATHI   K   Female   1/4/2004    KRISHNAMOORTHY A   9655060714
+YASAR ARAFATH     A   Male     6/13/2003   AYUBKAN A          8610871512
+NITHYA            S   Female   1/17/2004   SUBENDHIRAN R      8220095767
+SATHISH KUMAR     M   Male     6/18/2004   MURUGAN S          6382809072
+PRASANYA          P   Female   5/1/2004                       9944285116
+Guardian Name    Parents Income    Blood Group   Community    Religion    Country      State         City      Pincode
+
+                78,000            B-             Sc          Christian   India      Tamil Nadu   Trichy        620019
+                80000             O+             BCM         Muslim      India      Tamil Nadu   Trichy        620001
+                72000             B+             BC          Muslim      India      Tamil Nadu   Trichy        620015
+                72000             AB-            Sc          Hindu       India      Tamil Nadu   Trichy        621205
+                92,000            B+             BC          Hindu       India      Tamil Nadu   Trichy        620011
+                75,000            O+             BC          Christian   India      Tamil Nadu   Aruppukkottai 626129
+                72000             B              Sc          Hindu       India      Tamil Nadu   Pudhukkottai 622502
+                62000             O+             OC          Hindu       India      Tamil Nadu   Pudhukkottai 622102
+                72000             O+             BC          Hindhu      India      Tamil Nadu   Pudhukkottai 614616
+                96000             B+             SC          Hindu       India      Tamil Nadu   Coimbatore    641008
+                50000             O+             BC          Hindu       India      Tamil Nadu   Trichy        621008
+                72,000            O+             BC          Hindu       India      Tamil Nadu   Karaikudi     630001
+                48,000            O+             BC          Hindu       India      Tamil Nadu   Trichy        620012
+                72000             B+             Sc          Hindhu      India      Tamil Nadu   Trichy        621314
+                75000             AB+            BC          Hindu       India      Tamil Nadu   Trichy        620021
+                100000            B-             MBC         Hindu       India      Tamil Nadu   Trichy        621003
+                72000             B+             BCM         Muslim      India      Tamil Nadu   Trichy        621306
+                                                                                                 Thuvarankrich
+                72000             A+             BCM         Muslim      India      Tamil Nadu                 621314
+                                                 DNC                                             i
+                72000             B+                         Hindu       India      Tamil Nadu   thirupattur   630201
+                                                 (Maravar)
+                72000             B+             MBC         Hindu       India      Tamil Nadu   Siruganur     621105
+                48,000            A+             DNC         Hindu       India      Tamil Nadu   Viralimalai   621316
+                60000             O+             Sc          Hindu       India      Tamil Nadu   Rajalipatti   621312
+                75000             B+             BC          Christian   India      Tamil Nadu   Manapparai    621307
+                75000             A1+            BC          Christian   India      Tamil Nadu   Karur         621313
+                72000             B+             Muththuraja Hindu       India      Tamil Nadu   Thuraiyur     621008
+                72,000            AB+            MBC         Hindu       India      Tamil Nadu   Thuraiyur     620004
+                72,000            O+             SC          Hindu       India      Tamil Nadu   Thanjavur     614628
+                25,000            B+             BC          Hindu       India      Tamil Nadu   Tharanallur   620008
+                60000             A-             BC          Christian   India      Tamil Nadu   Manapparai    621307
+                72000             O+             BC kammalar Hindu       India      Tamil Nadu   Manikandam 620012
+                48000             O+             BC          Christian   India      Tamil Nadu   Nannilam      610 105
+                                                                                                 Palavanji
+                50,000            O+             MBC         Hindu       India      Tamil Nadu                 641601
+                                                                                                 Paalayam
+                72000             B+             MBC         Hindhu      India      Tamil Nadu   Kodaikkanal 624101
+               72000     B+   SCA   Hindu    India   Tamil Nadu   Trichy         620019
+               2L        B+   BCM   Muslim   India   Tamil Nadu   Illupur        622102
+               2 lacks   B+   BC    Hindu    India   Tamil Nadu   Trichy         620012
+               50,000    B+   Sc    Hindu    India   Tamil Nadu   Pattukkottai   614 602
+THENNARASU P   75000     O+   DNC   Hindu    India   Tamil Nadu   Gudalur        625518
+                                                                                                                   First
+                                                                       Status (New/Transfer/
+                              Address                                                              Current Sem   Gradute
+                                                                          Lateral Entery)
+                                                                                                                 (Yes/No)
+3/391 V.S colony anna nagar north kattur Trichy-19                      NEW                    7                 Yes
+27 T.V.K Street sangiliyanda puram trichy                               NEW                    7                 Yes
+543, Bharathiyar Nagar, Ravuthan medu, Thuvakudi, NIT, Trichy - 15 NEW                         7                 Yes
+1/52 East street paithamparai musiri TK trichy dt                       NEW                    7                 Yes
+263/4 Nagammai Street 6th cross road in Trichy                          NEW                    7                 Yes
+1/15,Kamarajar street, Aladipatti,Aruppukkoattai (Tk)                   NEW                    7                 Yes
+No 62/2 , Senaiyakkudi, Tiruppur post, Kulathur Thaluka,
+                                                                        NEW                    7                 Yes
+Pudukkottai, Tamilnadu
+D.no:9/A ,Anna Nagar, Illuppur, Pudukkottai                             NEW                    7                 Yes
+54/1, 8th Street, Avuliya nagar, Aranthangi, pudukkottai.               NEW                    7                 Yes
+1/119, Sentamti Nagar, Mel Quatters, Sugunapuram, Coimbatore
+                                                                        NEW                    7                 Yes
+south, Coimbatore,
+602, Middle           Kuniya muthu, Tamil
+             Street Krishnapuram             Nadu-641008
+                                     Govindhapuram    (post), Thuraiyur
+                                                                        NEW                    7                 Yes
+(TK), Trichy (DT).
+No:31,Muthramlinga nagar,Moraji street,Karaikudi                        NEW                    7                 Yes
+4/100 Chettiuranipatti, poolangulathupatti post, Alunthur, Trichy       NEW                    7                 Yes
+3/35, Vellakkulathuppatty, Ammachathiram (po),Marungapuri(tk),
+                                                                        NEW                    7                 Yes
+Trichy (Dt)
+8c, vaigai st, Amaravadhy st, LIC Colony, KK Nagar                      NEW                    7                 Yes
+6a kangani street B. Mettur Thuraiyur Trichy 621003                     NEW                    7                 Yes
+13/336, Udaiyar Colony,Trichy road, Manaparai                           NEW                    7                 Yes
+24, old post office street thuvarankurichy                              NEW                    7                 Yes
+Ovalipatti,A.Thekkur (post), Thirupathur (thaluk),Sivangangai (dis)     NEW                    7                 Yes
+No.2/226,santhapatti,siruganur, trichy                                  NEW                    7                 Yes
+265/1, Meppoothakudi, Viralimalai (tk), Pudukkottai (dt)                NEW                    7                 Yes
+3/412 Kodalikudi , Rajalipatti (post)
+                                                                        NEW                    7                 Yes
+Viralimalai (taluk) , Pudukkottai (district)
+15/132/1 Kulathurampatty,amayapuram post, manapparai                    NEW                    7                 Yes
+5/4 Kamaraj Nagar , Keelaveliyur ,Thogaimalai, karur                    NEW                    7                 Yes
+2/87, South Street, kalingamudaiyanpatti post, Thuraiyur Taluk,
+                                                                        NEW                    7                 Yes
+Trichy District
+No:7, First Street, Ponneripuram, Ponmalaipatti, Trichy-4               NEW                    7                 Yes
+1/40, Peravurani Tk, Kallurundhadu, Thanjavur, Tamilnadu                NEW                    7                 Yes
+15,3rd Street, Alaganathapuram, tharanallur, Trichy-8                   NEW                    7                 Yes
+Malaithathampatty, Malaiyadippatty (po), Manaparai (Tk), Trichy (Dt) NEW                       7                 Yes
+Kandhasamyudaiyar street,union office,Manikandam,trichy-12              NEW                    7                 Yes
+204 , vadugarpalaiyam , nannilam tk , Tiruvarur dt , Eravanchery
+                                                                        NEW                    7                 Yes
+post -610 105
+1/913 mugambigai nagar palavanji palayam Tiruppur                       NEW                    7                 Yes
+17/176, M. M. Street, Kodaikanal, Dindigul                              NEW                    7                 Yes
+5/67 Bharathi dasan nagar 10 th Street North Kattur Trichy-19   NEW             7   Yes
+15/19 pallivasala kadu,Illuppur taluk,Illuppur.                 NEW             7   Yes
+Dheeranmaanagar,287/B,saraswathi salai                          Lateral Entry   7   Yes
+Mettuvayal,Kurichi (po),Pattukkottai(Tk),Thanjavur (Dt)         Transfer        7   Yes
+16/1w Poosalamaya Thevar st,gudalur                             Transfer        7   Yes
+   Quota       Medium    Social Status DOJ         Phone Number    Mobile Number
+
+management    Tamil     Town          10.08.2021                  7448750877
+Counselling   Tamil     Town          10.08.2021                  9600494650
+Counselling   Tamil     Village       10.08.2021                  9788207634
+management    Tamil     Village       10.08.2021                  9342979685
+Counselling   English   Town          10.08.2021                  8667817188
+Counselling   Tamil     Village       10.08.2021                  9751904949
+Counselling   Tamil     Village       10.08.2021                  9751904949
+management    Tamil     Town          10.08.2021                  8248658448
+Counselling   Tamil     Town          10.08.2021                  9003829950
+management    Tamil     Village       10.08.2021                  9150796362
+Counselling   English   Village       10.08.2021                  9789459078
+Counselling   English   Town          10.08.2021                  9360111755
+Counselling   Tamil     Village       10.08.2021                  6374113587
+Counselling   Tamil     Village       10.08.2021                  8438517395
+Counselling   English   Town          10.08.2021                  9952837223
+management    Tamil     Village       10.08.2021                  6382325441
+Counselling   Tamil     Town          10.08.2021                  7904173272
+Counselling   English   Town          10.08.2021                  9384531368
+Counselling   English   Village       10.08.2021                  9994562385
+Counselling   English   Village       10.08.2021                  9943293171
+Counselling   Tamil     Village       10.08.2021                  8056464551
+management    Tamil     Village       10.08.2021                  6380576503
+Counselling   Tamil     Village       10.08.2021                  9043145367
+Counselling   English   Village       10.08.2021                  7812823593
+Counselling   English   Village       10.08.2021                  8124495316
+Counselling   Tamil     Town          10.08.2021                  9025790419
+management    Tamil     Town          10.08.2021                  9342254158
+Counselling   Tamil     Town          10.08.2021                  9363570195
+Counselling   Tamil     Village       10.08.2021                  9360406395
+Counselling   Tamil     Village       10.08.2021                  7708409294
+Counselling   Tamil     Village       10.08.2021                  8428534051
+Counselling   Tamil     Town          10.08.2021                  9585769788
+management    Tamil     Town          10.08.2021                  9080267007
+management    Tamil     Town      10.08.2021   9360651872
+management    English   Town      10.08.2021   6382385048
+Counselling   English   Town      10.08.2021   8220095767
+Counselling   Tamil     Village   10.08.2021   9025359718
+management    English   Town      10.08.2021   9043377959
+                  Email            Aadhar No
+
+angelepsiba2003@gmail.com        234340103555
+audheen34@gmail.com              834225321905
+barakkathit@gmail.com            883275604130
+brundhadharani@gmail.com         808731157146
+crazydinesh662@gmail.com         850461628415
+gnanasamuela6@gmail.com          920016210838
+jaisuryaj732@gmail.com           665704003660
+rnjenani003@gmail.com            902675792823
+kannankannan77979@gmail.com      500645804957
+kkarthikraja823@gmail.com        281888820689
+kavinjayakannan007@gmail.com     363731639911
+kayathrisiva27@gmail.com         501999773774
+kmkkishore143@gmail.com          996015826469
+lalithaklalithak2004@gmail.com   454292780972
+jillamadhan6196@gmail.com        783369424055
+manihackers56@gmail.com          358720583163
+anasj9259@gmail.com              965465377944
+mohamedaslam31368@gmail.com      760200237377
+monikasri822004@gmail.com        934177369374
+prasannamahendran64@gmail.com    866119130102
+santhoshspm38@gmail.com          766043393369
+sathishkannan5275@gmail.com      920950563104
+sebastian80989661@gmail.com      572845740194
+stephenraj2937@gmail.com         686025702227
+suba012004@gmail.com             741206158036
+subasrim10@gmail.com             775318725257
+gunalsujhin@gmail.com            617593608447
+shakthi17902@gmail.com           447037302370
+suryajetly0tts0@gmIl.com         850620842741
+tn48udhaya@gmail.com             893366913590
+udhaya444udhaya@gmail.com        753567096698
+uma21042004@gmail.com            828282359220
+gvanitha539@gmail.com            674054848897
+bharathividhyak2004@gmail.com             376503516341
+yashoffcl01@gmail.com                     216132419778
+nithyasubendhiran287@gmail.com            623396077487
+msathishkumarmsathishkumar380@gmail.com   647420123212
+vijayprasanya4@gmail.com                  799195900112
+                                                Semester   Course
+Regulation Batch Degree        Branch                                                        Course Name
+                                                 Number     Code
+ 2021-FT   2021   B. Tech Information Technol      1       HS3152   Professional English - I
+ 2021-FT   2021   B. Tech Information Technol      1       MA3151   Matrices and Calculus
+ 2021-FT   2021   B. Tech Information Technol      1       PH3151   Engineering Physics
+ 2021-FT   2021   B. Tech Information Technol      1       CY3151   Engineering Chemistry
+ 2021-FT   2021   B. Tech Information Technol      1       GE3151   Problem Solving and Python Programming
+ 2021-FT   2021   B. Tech Information Technol      1       GE3152   தமிழர் மரபு /Heritage of Tamils
+ 2021-FT   2021   B. Tech Information Technol      1       GE3171   Problem Solving and Python Programming Laboratory
+ 2021-FT   2021   B. Tech Information Technol      1       BS3171   Physics and Chemistry Laboratory
+ 2021-FT   2021   B. Tech Information Technol      1       GE3172   English Practicaloratory
+ 2021-FT   2021   B. Tech Information Technol      2       HS3252   Professional English - II
+ 2021-FT   2021   B. Tech Information Technol      2       MA3251   Statistics and Numerical Methods
+ 2021-FT   2021   B. Tech Information Technol      2       PH3256   Physics for Information Science
+ 2021-FT   2021   B. Tech Information Technol      2       BE3251   Basic Electrical and Electronics Engineering
+ 2021-FT   2021   B. Tech Information Technol      2       GE3251   Engineering Graphics
+ 2021-FT   2021   B. Tech Information Technol      2       CS3251   Programming in C
+ 2021-FT   2021   B. Tech Information Technol      2       GE3252   தமிழரும் ததொழில் நுட்பமும்/Tamils and Technology
+ 2021-FT   2021   B. Tech Information Technol      2       GE3271   Engineering Practices Laboratory
+ 2021-FT   2021   B. Tech Information Technol      2       CS3271   Programming in C Laboratory
+ 2021-FT   2021   B. Tech Information Technol      2       GE3272   Communication Practical laboratory / Foreign Language
+ 2021-FT   2021   B. Tech Information Technol      3       MA3354   Discrete Mathematics
+ 2021-FT   2021   B. Tech Information Technol      3       CS3351   Digital Principles and Computer Organization
+ 2021-FT   2021   B. Tech Information Technol      3       CS3352   Foundations of Data Science
+ 2021-FT   2021   B. Tech Information Technol      3       CD3291   Data Structures and Algorithms
+ 2021-FT   2021   B. Tech Information Technol      3       CS3391   Object Oriented Programming
+ 2021-FT   2021   B. Tech Information Technol      3       CD3281   Data Structures and Algorithms Laboratory
+ 2021-FT   2021   B. Tech Information Technol      3       CS3381   Object Oriented Programming Laboratory
+ 2021-FT   2021   B. Tech Information Technol      3       CS3361   Data Science Practicaloratory
+ 2021-FT   2021   B. Tech Information Technol      3       GE3361   Professional Development
+ 2021-FT   2021   B. Tech Information Technol      4       CS3452   Theory of Computation
+ 2021-FT   2021   B. Tech Information Technol      4       CS3491   Artificial Intelligence and Machine Learning
+2021-FT   2021   B. Tech Information Technol   4   CS3492    Database Management Systems
+2021-FT   2021   B. Tech Information Technol   4    IT3401   Web Essentials
+2021-FT   2021   B. Tech Information Technol   4   CS3451    Introduction to Operating Systems
+2021-FT   2021   B. Tech Information Technol   4   GE3451    Environmental Sciences and Sustainability
+2021-FT   2021   B. Tech Information Technol   4   CS3461    Operating Systems Laboratory
+2021-FT   2021   B. Tech Information Technol   4   CS3481    Database Management Systems Laboratory
+2021-FT   2021   B. Tech Information Technol   5   CS3591    Computer Networks
+2021-FT   2021   B. Tech Information Technol   5    IT3501   Full Stack Web Development
+2021-FT   2021   B. Tech Information Technol   5   CS3551    Distributed Computing
+2021-FT   2021   B. Tech Information Technol   5   CS3691    Embedded Systems and IoT
+2021-FT   2021   B. Tech Information Technol   5   CCS334    Big Data Analytics
+2021-FT   2021   B. Tech Information Technol   5   CCS336    Cloud Services Management
+2021-FT   2022   B. Tech Information Technol   6   MX3082    Elements of Literature
+2021-FT   2021   B. Tech Information Technol   5    IT3511   Full Stack Web Development Laboratory
+2021-FT   2021   B. Tech Information Technol   6   CCS356    Object Oriented Software Engineering
+2021-FT   2022   B. Tech Information Technol   6   OEI351    Introduction to Industrial Instrumentation and Control
+2021-FT   2021   B. Tech Information Technol   6   CCW331    Business Analytics
+2021-FT   2021   B. Tech Information Technol   6   CCS335    Cloud Computing
+2021-FT   2021   B. Tech Information Technol   6   CCS332    App Development
+2021-FT   2021   B. Tech Information Technol   6   CCS342    DevOps
+2021-FT   2022   B. Tech Information Technol   6   MX3085    Well Being with Traditional Practices - Yoga, Ayurveda and
+2021-FT   2021   B. Tech Information Technol   6    IT3681   Siddha
+                                                             Mobile Applications Development Laboratory
+2021-FT   2021   B. Tech Information Technol   7   GE3791    Human Values and Ethics
+2021-FT   2021   B. Tech Information Technol   7   GE3751    Principles of Management
+2021-FT   2021   B. Tech Information Technol   7    AI3021   IT in Agricultural System
+2021-FT   2021   B. Tech Information Technol   7   CME365    Renewable Energy Technologies
+2021-FT   2021   B. Tech Information Technol   7   OCH353    Energy Technology
+2021-FT   2021   B. Tech Information Technol   7    IT3711   Summer internship
+ Course Type      Course Requirement      Course Catagory
+                                                                   QP code    Number of credits         Duration       Internal Mode
+Theory            Core                 Humanities, Social Sciences and Mana                        3               3
+Theory            Core                 Basic Sciences Courses                                      4               3
+Theory            Core                 Basic Sciences Courses                                      3               3
+Theory            Core                 Basic Sciences Courses                                      3               3
+Theory            Core                 Engineering Sciences                                        3               3
+Theory            Core                 Courses
+                                       Humanities, Social Sciences and Mana                        1               3
+Practical         Core                 Engineering Sciences                                        2               3
+Practical         Core                 Courses
+                                       Basic Sciences Courses                                      2               3
+Practical         Core                 Employability                                               1               3
+Theory            Core                 Enhancement   Courses
+                                       Humanities, Social Sciences and Mana                        2               3
+Theory            Core                 Basic Sciences Courses                                      4               3
+Theory            Core                 Basic Sciences Courses                                      3               3
+Theory            Core                 Engineering Sciences                                        3               3
+Theory            Core                 Courses
+                                       Engineering Sciences                                        4               3
+Theory            Core                 Courses
+                                       Professional Core Courses                                   3               3
+Theory            Core                 Humanities, Social Sciences and Mana                        1               3
+Practical         Core                 Engineering Sciences                                        2               3
+Practical         Core                 Courses
+                                       Professional Core Courses                                   2               3
+Practical         Core                 Employability                                               2               3
+Theory            Core                 Enhancement
+                                       Basic SciencesCourses
+                                                        Courses                                     4              3
+                                       Engineering Sciences
+Practical cum TheoCore                                                                              4              3
+                                       Courses
+                                       Professional Core
+Theory            Core                                                                              3              3
+                                       Courses
+                                       Professional Core
+Theory            Core                                                                              3              3
+                                       Courses
+                                       Professional Core
+Theory            Core                                                                              3              3
+                                       Courses
+Practical         Core                 Professional Core                                            2              3
+Practical         Core                 Courses
+                                       Professional Core                                          1.5              3
+Practical         Core                 Courses
+                                       Professional Core                                            2              3
+Practical         Core                 Courses
+                                       Employability                                                1              3
+Theory            Core                 Enhancement   Courses
+                                       Professional Core                                            3              3
+Practical cum TheoCore                 Courses
+                                       Professional Core                                            4              3
+                                       Courses
+Theory            Core                      Professional Core                        3   3
+Practical cum TheoCore                      Courses
+                                            Professional Core                        4   3
+Theory            Core                      Courses
+                                            Professional Core                        3   3
+Theory            Core                      Courses
+                                            Basic Sciences Courses                   2   3
+                                            Professional Core
+Practical         Core                                                             1.5   3
+                                            Courses
+                                            Professional Core
+Practical         Core                                                             1.5   3
+                                            Courses
+                                            Professional Core
+Practical cum TheoCore                                                               4   3
+                                            Courses
+                                            Professional Core
+Theory            Core                                                               3   3
+                                            Courses
+                                            Professional Core
+Theory            Core                                                               3   3
+                                            Courses
+                                            Professional Core
+Practical cum TheoCore                                                               4   3
+                                            Courses
+                                            Professional Elective
+Practical cum TheoProfessional Elective I                                            3   3
+                                            Courses
+                                            Professional Elective
+Practical cum TheoProfessional Elective II                                           3   3
+                                            Courses
+Theory            Mandatory Course-I        Mandatory Courses                        0   0
+                                            Professional Core
+Practical         Core                                                               2   3
+                                            Courses
+Practical         Core                      Professional Core                        4   3
+Theory            Open Elective- I          Courses
+                                            Open Elective                            3   3
+Practical cum TheoProfessional Elective III Professional Elective                    3   3
+Practical cum TheoProfessional Elective IV Courses
+                                            Professional Elective                    3   3
+Practical cum TheoProfessional Elective V Courses
+                                            Professional Elective                    3   3
+Practical cum TheoProfessional Elective VI Courses
+                                            Professional Elective                    3   3
+Theory            Mandatory Course-II       Courses Courses
+                                            Mandatory                                0   0
+Practical         Core                      Professional Core Courses              1.5   3
+Theory            Core                      Humanities, Social Sciences and Mana     2   3
+Theory            Elective - Management Humanities, Social Sciences and Mana         3   3
+Theory            Open Elective – II        Open Elective                            3   3
+Theory            Open Elective – III       Open Elective Courses                    3   3
+Theory            Open Elective – IV        Open Elective Courses                    3   3
+Practicals        Core                      Employability Enhancement Courses        2   0
+            Is Registration ?
+Sort Order   (0 - NO/1 - YES) comments
+          1         1         Nil
+          2         1         Nil
+          3         1         Nil
+          4         1         Nil
+          5         1         Nil
+          6         1         Nil
+          7         1         Nil
+          8         1         Nil
+          1         1         Nil
+          2         1         Nil
+          3         1         Nil
+          4         1         Nil
+          5         1         Nil
+          6         1         Nil
+          7         1         Nil
+          8         1         Nil
+          9         1         Nil
+         10         1         Nil
+         11         1         Nil
+          1         1         Nil
+          2         1         Nil
+          3         1         Nil
+          4         1         Nil
+          5         1         Nil
+          6         1         Nil
+          7         1         Nil
+          8         1         Nil
+          9         1         Nil
+          1         1         Nil
+          2         1         Nil
+3   1   Nil
+4   1   Nil
+5   1   Nil
+6   1   Nil
+7   1   Nil
+8   1   Nil
+1   1   Nil
+2   1   Nil
+3   1   Nil
+4   1   Nil
+5   1   Nil
+6   1   Nil
+7   1   Nil
+8   1   Nil
+1   1   Nil
+2   1   Nil
+3   1   Nil
+4   1   Nil
+5   1   Nil
+6   1   Nil
+7   1   Nil
+8   1   Nil
+1   1   Nil
+2   1   Nil
+3   1   Nil
+4   1   Nil
+5   1   Nil
+6   1   Nil
+Register NumberStudent Name           Degreebranch Name                Course-1
+Sem 05
+
+   811221205001   ANGEL EPSIBA.A      B. TECH INFORMATION Technology CCS334 Big Data Analytics
+   811221205003   ASARUDHEEN.K        B. TECH INFORMATION Technology CCS334 Big Data Analytics
+   811221205004   BARAKKATH NISHA.S   B. TECH INFORMATION Technology CCS334 Big Data Analytics
+   811221205005   BRUNDHA.P           B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205009   DINESH.M            B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205010   GNANASAMUEL.A       B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205013   JAI SURYA.K         B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205014   JENANI.R            B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205015   KANNAN.M            B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205016   KARTHIK RAJA.M      B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205017   KAVIN.J             B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205018   KAYATHRI.S          B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205019   KISHORE.M           B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205020   LALITHA.K           B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205021   MADHAN.S            B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205022   MANIKANDAN.M        B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205023   MOHAMED ANAS.J      B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205024   MOHAMED ASLAM.S     B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205025   MONIKA SRI.B        B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205029   PRASANNA.M          B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205032   SANTHOSH KUMAR.P    B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205033   SATHISH KANNAN.S    B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205034   SEBASTHIYAN.S       B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205035   STEPHEN.S           B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205036   SUBASHINI.M         B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205037   SUBASRI.M           B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205038   SUJHIN.R            B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205039   SUMITHA.A           B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205041   SURYA JETLY.T       B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205042   UDHAYA HARISH.B     B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205043   UDHAYANITHI.C       B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205044   UMA MAHESHWARI.R    B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205045   VANITHA.G           B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205046   VIDHYA BHARATHI.K   B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205048   YASAR ARAFATH.A     B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205301   NITHYA.S            B. TECH INFORMATION Technology   CCS334 Big Data Analytics
+   811221205701   SATHISH KUMAR.M     B. TECH INFORMATION Technology CCS334 Big Data Analytics
+   811221205702   PRASANYA.P          B. TECH INFORMATION Technology CCS334 Big Data Analytics
+
+
+Sem 06
+
+   811221205001   ANGEL EPSIBA.A      B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205003   ASARUDHEEN.K        B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205004   BARAKKATH NISHA.S   B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205005   BRUNDHA.P           B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205009   DINESH.M            B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205010   GNANASAMUEL.A       B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205013   JAI SURYA.K         B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205014   JENANI.R            B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205015   KANNAN.M            B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205016   KARTHIK RAJA.M      B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205017   KAVIN.J             B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205018   KAYATHRI.S          B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205019   KISHORE.M           B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205020   LALITHA.K           B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205021   MADHAN.S            B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205022   MANIKANDAN.M        B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205023   MOHAMED ANAS.J      B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205024   MOHAMED ASLAM.S     B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205025   MONIKA SRI.B        B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205029   PRASANNA.M          B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205032   SANTHOSH KUMAR.P    B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205033   SATHISH KANNAN.S    B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205034   SEBASTHIYAN.S       B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205035   STEPHEN.S           B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205036   SUBASHINI.M         B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205037   SUBASRI.M           B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205038   SUJHIN.R            B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205039   SUMITHA.A           B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205041   SURYA JETLY.T       B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205042   UDHAYA HARISH.B     B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205043   UDHAYANITHI.C       B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205044   UMA MAHESHWARI.R    B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205045   VANITHA.G           B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205046   VIDHYA BHARATHI.K   B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205048   YASAR ARAFATH.A     B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205301   NITHYA.S            B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205701   SATHISH KUMAR.M     B. TECH INFORMATION Technology   CCW331 Business Analytics
+   811221205702   PRASANYA.P          B. TECH INFORMATION Technology   CCW331 Business Analytics
+
+Sem 07
+
+   811221205001   ANGEL EPSIBA.A      B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205003   ASARUDHEEN.K        B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205004   BARAKKATH NISHA.S   B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205005   BRUNDHA.P           B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205009   DINESH.M            B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205010   GNANASAMUEL.A       B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205013   JAI SURYA.K         B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205014   JENANI.R            B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205015   KANNAN.M            B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205016   KARTHIK RAJA.M      B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205017   KAVIN.J             B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205018   KAYATHRI.S          B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205019   KISHORE.M           B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205020   LALITHA.K           B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205021   MADHAN.S            B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205022   MANIKANDAN.M        B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205023   MOHAMED ANAS.J      B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205024   MOHAMED ASLAM.S     B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205025   MONIKA SRI.B        B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205029   PRASANNA.M          B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205032   SANTHOSH KUMAR.P    B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205033   SATHISH KANNAN.S    B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205034   SEBASTHIYAN.S       B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205035   STEPHEN.S           B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205036   SUBASHINI.M         B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205037   SUBASRI.M           B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205038   SUJHIN.R            B. TECH INFORMATION Technology   GE3751 Principles of Management
+   811221205039   SUMITHA.A           B. TECH INFORMATION Technology   GE3751 Principles of Management
+811221205041   SURYA JETLY.T       B. TECH INFORMATION Technology   GE3751 Principles of Management
+811221205042   UDHAYA HARISH.B     B. TECH INFORMATION Technology   GE3751 Principles of Management
+811221205043   UDHAYANITHI.C       B. TECH INFORMATION Technology   GE3751 Principles of Management
+811221205044   UMA MAHESHWARI.R    B. TECH INFORMATION Technology   GE3751 Principles of Management
+811221205045   VANITHA.G           B. TECH INFORMATION Technology   GE3751 Principles of Management
+811221205046   VIDHYA BHARATHI.K   B. TECH INFORMATION Technology   GE3751 Principles of Management
+811221205048   YASAR ARAFATH.A     B. TECH INFORMATION Technology   GE3751 Principles of Management
+811221205301   NITHYA.S            B. TECH INFORMATION Technology   GE3751 Principles of Management
+811221205701   SATHISH KUMAR.M     B. TECH INFORMATION Technology   GE3751 Principles of Management
+811221205702   PRASANYA.P          B. TECH INFORMATION Technology   GE3751 Principles of Management
+Professor EmaiCourse-2                          Professor EmaiCourse-3   Professor Emai
+
+
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+             CCS336 Cloud Services Management
+CCS336 Cloud Services Management
+CCS336 Cloud Services Management
+
+
+
+
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+CCS335 Cloud Computing             CCS332 App Development
+             CCS335 Cloud Computing                 CCS332 App Development
+             CCS335 Cloud Computing                 CCS332 App Development
+             CCS335 Cloud Computing                 CCS332 App Development
+             CCS335 Cloud Computing                 CCS332 App Development
+             CCS335 Cloud Computing                 CCS332 App Development
+
+
+
+
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Management   CME365 Renewable Energy Technologies   OCH353 Energy Technology
+Course-4   Professor EmaiCourse- Professor EmaiCourse- Professor EmaiCourse- Professor Emai
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+CCS342 DevOps
+Course- Professor EmaiCourse- Professor EmaiCourse-1Professor Email Course-1Professor Email Course-1
+Professor Email Course-1Professor Email Course-1Professor Email Course-1Professor Email Course-1
+Professor Email Course-1Professor Email Course-1Professor Email Course-1Professor Email Course-2
+Professor Email Course-2Professor Email Course-2Professor Email Course-2Professor Email Course-2
+Professor Email Course-2Professor Email-25
+Register NumberStudent Name           Degreebranch Name              Course-1
+Sem 05
+
+   811221205004   BARAKKATH NISHA.S   B. TECH INFORMATION Technology CCS364 Soft Computing
+   811221205014   JENANI.R            B. TECH INFORMATION Technology CCS364 Soft Computing
+
+
+Sem 06
+
+   811221205004   BARAKKATH NISHA.S   B. TECH INFORMATION Technology CCS341 Data Warehousing
+   811221205014   JENANI.R            B. TECH INFORMATION Technology CCS341 Data Warehousing
+
+Sem 07
+
+   811221205004   BARAKKATH NISHA.S   B. TECH INFORMATION Technology CCS370 UI/UX Design
+   811221205014   JENANI.R            B. TECH INFORMATION Technology CCS370 UI/UX Design
+Professor EmaiCourse-2                          Professor EmaiCourse-3   Professor Emai
+             CCS339 Cryptocurrency and
+             Blockchain Technologies and
+             CCS339 Cryptocurrency
+             Blockchain Technologies
+
+
+
+
+             CCS358 Principles of Programming
+             Languages
+             CCS358 Principles of Programming
+             Languages
+
+
+
+
+             CCS367 Storage Technologies
+             CCS367 Storage Technologies
+Course-4        Professor EmaiCourse- Professor EmaiCourse- Professor EmaiCourse- Professor Emai
+
+
+
+
+CCS342 DevOps
+CCS342 DevOps
+Course- Professor EmaiCourse- Professor EmaiCourse-1Professor Email Course-1Professor Email Course-1
+Professor Email Course-1Professor Email Course-1Professor Email Course-1Professor Email Course-1
+Professor Email Course-1Professor Email Course-1Professor Email Course-1Professor Email Course-2
+Professor Email Course-2Professor Email Course-2Professor Email Course-2Professor Email Course-2
+Professor Email Course-2Professor Email-25
+Register Number      Course C Semester ExaminatiInternal mExtrenal Total   Result   Letter Gr Grade PoiPass mont
+          811221205015 PH3151     1            7
+          811221205016 MA3151     1            7
+          811221205016 PH3151     1            7
+          811221205019 MA3151     1            7
+          811221205019 PH3151     1            7
+          811221205022 PH3151     1            7
+          811221205025 MA3151     1            7
+          811221205025 PH3151     1            7
+          811221205029 MA3151     1            7
+          811221205032 MA3151     1            7
+          811221205032 PH3151     1            7
+          811221205032 CY3151     1            7
+          811221205033 MA3151     1            7
+          811221205033 PH3151     1            7
+          811221205034 PH3151     1            7
+          811221205038 MA3151     1            7
+          811221205038 PH3151     1            7
+          811221205038 CY3151     1            7
+          811221205042 PH3151     1            7
+Pass Year
+Register Number      Course C Semester ExaminatiInternal mExtrenal Total   Result   Letter Gr Grade PoiPass mont
+          811221205010 MA3251     2            7
+          811221205015 MA3251     2            7
+          811221205015 BE3251     2            7
+          811221205016 MA3251     2            7
+          811221205016 BE3251     2            7
+          811221205016 CS3251     2            7
+          811221205019 MA3251     2            7
+          811221205019 PH3256     2            7
+          811221205019 BE3251     2            7
+          811221205022 PH3256     2            7
+          811221205022 BE3251     2            7
+          811221205024 MA3251     2            7
+          811221205024 PH3256     2            7
+          811221205025 MA3251     2            7
+          811221205025 PH3256     2            7
+          811221205025 BE3251     2            7
+          811221205029 MA3251     2            7
+          811221205029 PH3256     2            7
+          811221205032 MA3251     2            7
+          811221205032 PH3256     2            7
+          811221205033 MA3251     2            7
+          811221205033 PH3256     2            7
+          811221205033 GE3251     2            7
+          811221205034 MA3251     2            7
+          811221205034 PH3256     2            7
+          811221205038 MA3251     2            7
+          811221205038 PH3256     2            7
+          811221205038 BE3251     2            7
+          811221205038 CS3251     2            7
+          811221205042 MA3251     2            7
+Pass Year
+Register Number      Course C Semester ExaminatiInternal mExtrenal Total   Result   Letter Gr Grade PoiPass mont
+          811221205010 MA3354         3        7
+          811221205019 MA3354         3        7
+          811221205025 MA3354         3        7
+          811221205025 CS3352         3        7
+          811221205025 CD3291         3        7
+          811221205029 CS3391         3        7
+          811221205029 MA3354         3        7
+          811221205033 CS3391         3        7
+          811221205038 MA3354         3        7
+          811221205038 CS3352         3        7
+          811221205042 MA3354         3        7
+          811221205042 CS3352         3        7
+          811221205042 CS3391         3        7
+          811221205702 MA3354         3        7
+Pass Year
+Register Number          Course C Semester ExaminatiInternal mExtrenal Total   Result   Letter Gr Grade PoiPass mont
+          811221205019    GE3451      4            7
+          811221205025    CS3452      4            7
+          811221205025    CS3492      4            7
+          811221205038    CS3452      4            7
+          811221205038    CS3492      4            7
+          811221205038    CS3451      4            7
+          811221205038    GE3451      4            7
+          811221205043    CS3452      4            7
+Pass Year
+Register Number          Course C Semester ExaminatiInternal mExtrenal Total   Result   Letter Gr Grade PoiPass mont
+          811221205017    CS3551      5            7
+          811221205018    CS3551      5            7
+          811221205024    CS3551      5            7
+          811221205025     IT3501     5            7
+          811221205038     IT3501     5            7
+          811221205038    CS3551      5            7
+          811221205038    CCS336      5            7
+          811221205043    CS3691      5            7
+Pass Year
+Register Number      Course C Semester ExaminatiInternal mExtrenal Total   Result   Letter Gr Grade PoiPass mont
+          811221205015 CCS356     6            7
+          811221205025 CCS356     6            7
+Pass Year
+Register Number   Course C Semester ExaminatiInternal mExtrenal Total   Result   Letter Gr Grade PoiPass mont
+Pass Year
+

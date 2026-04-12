@@ -1,13 +1,13 @@
 name: Batch Data Scraper
 
 on:
-  workflow_dispatch: # Allows you to start it manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   download:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Essential for the bot to save files back to your repo
+      contents: write
     
     steps:
       - name: Checkout Repository
@@ -16,54 +16,40 @@ jobs:
       - name: Fetch and Clean URL List
         run: |
           mkdir -p scraped_data
-          echo "Step 1: Fetching all URLs from Wayback Machine..."
-          # Get URLs and sort them
+          # Fetch from Wayback CDX
           curl -s "http://web.archive.org/cdx/search/cdx?url=igceng.com/*&output=text&fl=original" | sort -u > raw.txt
           
-          echo "Step 2: Cleaning and filtering..."
-          # 1. Only keep actual http links
-          # 2. Fix double slashes (com// to com/)
-          # 3. Filter out common image formats
+          # Clean double slashes and remove images
           grep "^http" raw.txt | sed 's|com//|com/|g' | grep -Ev "\.(jpg|jpeg|png|gif|svg|ico|webp)$" > filtered_urls.txt
-          
-          echo "Found $(wc -l < filtered_urls.txt) valid links."
 
-      - name: Batch Download
+      - name: Wayback Batch Download
         run: |
-          # Limit to 50 files per run to avoid timeout and IP bans
+          # Take 50 files
           head -n 50 filtered_urls.txt > batch.txt
           
           while IFS= read -r url; do
             [ -z "$url" ] && continue
-            echo "Downloading: $url"
             
-            # -q: quiet
-            # -nc: no-clobber (don't download same file twice)
-            # -L: follow redirects
-            # -U: Browser User-Agent
-            # --referer: Makes it look like you are clicking from their homepage
-            wget -q -nc -L \
-              --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" \
-              --referer="http://igceng.com/" \
-              --timeout=15 \
-              --tries=2 \
-              "$url" -P ./scraped_data/ || echo "Skipping: $url (Failed)"
+            # This is the magic part: it tells Wayback to serve the file directly
+            WAYBACK_URL="https://web.archive.org/web/20260101000000if_/$url"
             
-            # The 'Batch' pause - 3 seconds between files
-            sleep 3
+            echo "Downloading from Archive: $url"
+            
+            # We don't need complex headers for Archive.org
+            wget -q -nc --timeout=20 --tries=3 "$WAYBACK_URL" -O "./scraped_data/$(basename "$url")" || echo "Failed Archive Download: $url"
+            
+            # Archive.org is nicer, but still give it a 2s rest
+            sleep 2
           done < batch.txt
 
       - name: Save Data to Repository
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
           git add scraped_data/
-          
-          # Only commit if there is actually new data
           if git diff --staged --quiet; then
-            echo "No new files to commit."
+            echo "No new files."
           else
-            git commit -m "Automated batch download: $(date +'%Y-%m-%d')"
+            git commit -m "Data grabbed from Wayback Archive"
             git push
           fi

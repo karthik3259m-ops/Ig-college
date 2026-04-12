@@ -1,35 +1,48 @@
-- name: Generate URL List and Download
+name: Batch Data Scraper
+
+on:
+  workflow_dispatch:
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Fetch and Filter URLs
         run: |
           mkdir -p scraped_data
-          
-          echo "Step 1: Fetching URLs (with retry)..."
-          # Added --retry and a check to see if the output is actually a list
-          curl --retry 3 --retry-delay 5 -s "http://web.archive.org/cdx/search/cdx?url=igceng.com/*&output=text&fl=original" | sort -u > raw_urls.txt
-          
-          # SAFETY CHECK: If the file contains "<html>", the API failed.
-          if grep -q "<html>" raw_urls.txt; then
-            echo "Error: Wayback API returned an error page instead of URLs. Stopping to save time."
-            exit 1
-          fi
+          echo "Fetching from Wayback..."
+          # Fetch URLs, filter for actual http links, remove images
+          curl -s "http://web.archive.org/cdx/search/cdx?url=igceng.com/*&output=text&fl=original" | sort -u > raw.txt
+          grep "^http" raw.txt | grep -Ev "\.(jpg|jpeg|png|gif|svg|ico|webp)$" > filtered_urls.txt
+          echo "Found $(wc -l < filtered_urls.txt) files to download."
 
-          echo "Step 2: Filtering out images..."
-          # Only keep lines that start with http (actual URLs) and aren't images
-          grep "^http" raw_urls.txt | grep -Ev "\.(jpg|jpeg|png|gif|svg|ico|webp)$" > filtered_urls.txt
-          
-          if [ ! -s filtered_urls.txt ]; then
-            echo "No valid URLs found to download."
-            exit 0
-          fi
-
-          echo "Step 3: Starting Batch Download..."
-          # Limit to first 20 files for this run to make sure it works
-          head -n 20 filtered_urls.txt > test_batch.txt
+      - name: Batch Download
+        run: |
+          # Only process the first 50 to prevent GitHub from killing the job
+          head -n 50 filtered_urls.txt > batch.txt
           
           while IFS= read -r url; do
-            echo "Fetching: $url"
-            # Use --timeout to prevent the whole action from hanging
-            wget -q -nc --timeout=15 -U "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
-            "$url" -P ./scraped_data/ || echo "Failed: $url"
-            
-            sleep 3
-          done < test_batch.txt
+            echo "Processing: $url"
+            # We use -L to follow redirects and -U to look like a browser
+            wget -q -nc -L -U "Mozilla/5.0" "$url" -P ./scraped_data/ || echo "Skipping failed download"
+            sleep 2
+          done < batch.txt
+
+      - name: Upload to Repository
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add scraped_data/
+          # Only commit if there are actually new files
+          if git diff --staged --quiet; then
+            echo "No new data found."
+          else
+            git commit -m "Add scraped batch data"
+            git push
+          fi

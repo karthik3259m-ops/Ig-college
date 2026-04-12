@@ -16,29 +16,41 @@ jobs:
       - name: Fetch and Clean URL List
         run: |
           mkdir -p scraped_data
-          # Fetch from Wayback CDX
+          echo "Step 1: Fetching URLs from Wayback CDX..."
+          # Get unique URLs, fix double slashes, and remove images
           curl -s "http://web.archive.org/cdx/search/cdx?url=igceng.com/*&output=text&fl=original" | sort -u > raw.txt
-          
-          # Clean double slashes and remove images
           grep "^http" raw.txt | sed 's|com//|com/|g' | grep -Ev "\.(jpg|jpeg|png|gif|svg|ico|webp)$" > filtered_urls.txt
+          echo "Cleaned list created."
 
       - name: Wayback Batch Download
         run: |
-          # Take 50 files
+          # Take the top 50 valid links
           head -n 50 filtered_urls.txt > batch.txt
           
           while IFS= read -r url; do
             [ -z "$url" ] && continue
+            echo "Searching Archive for: $url"
             
-            # This is the magic part: it tells Wayback to serve the file directly
-            WAYBACK_URL="https://web.archive.org/web/20260101000000if_/$url"
+            # 1. Ask Wayback for the most recent successful snapshot (200 OK)
+            JSON_RESP=$(curl -s "http://archive.org/wayback/available?url=$url")
             
-            echo "Downloading from Archive: $url"
+            # 2. Extract the actual archived URL using jq
+            # We use '0if_' to get the raw file without the Wayback toolbar
+            ARCHIVE_URL=$(echo $JSON_RESP | jq -r '.archived_snapshots.closest.url // empty' | sed 's/\/web\//\/web\/0if_\//')
+
+            if [ ! -z "$ARCHIVE_URL" ] && [ "$ARCHIVE_URL" != "null" ]; then
+              echo "Found Snapshot: $ARCHIVE_URL"
+              # Extract original filename
+              FILENAME=$(basename "$url")
+              # If filename is empty (for root dirs), call it index.html
+              [ -z "$FILENAME" ] && FILENAME="index.html"
+              
+              wget -q -nc --timeout=30 --tries=3 "$ARCHIVE_URL" -O "./scraped_data/$FILENAME" || echo "Download failed"
+            else
+              echo "No snapshot available for $url"
+            fi
             
-            # We don't need complex headers for Archive.org
-            wget -q -nc --timeout=20 --tries=3 "$WAYBACK_URL" -O "./scraped_data/$(basename "$url")" || echo "Failed Archive Download: $url"
-            
-            # Archive.org is nicer, but still give it a 2s rest
+            # Delay to prevent Archive.org rate limiting
             sleep 2
           done < batch.txt
 
@@ -50,6 +62,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No new files."
           else
-            git commit -m "Data grabbed from Wayback Archive"
+            git commit -m "Batch data recovered from Wayback Archive"
             git push
           fi

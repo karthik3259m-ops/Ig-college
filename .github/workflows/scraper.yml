@@ -15,24 +15,30 @@ jobs:
 
       - name: Fetch, Filter, and Archive Scrape
         run: |
-          # 1. Create directory structure
+          # 1. Setup Directories
           mkdir -p Faculty Syllabus Timetables Events Images Archives Others
           
-          # 2. Get list of files from Wayback CDX API
-          # We use "original" to get the base URL, then we will modify it to download from Archive
+          # 2. Get list of files (Using a broader search and cleaning the output)
+          # Removed the hardcoded 2026 date to let Wayback find the latest version
           curl -s "https://web.archive.org/cdx/search/cdx?url=igceng.com/*&output=text&fl=original" \
           | grep -E "\.(jpg|jpeg|png|gif|pdf|docx|doc|xls|xlsx|rar|zip|7z)$" \
           | sort -u > all_links.txt
+
+          # Check if we actually found links
+          if [ ! -s all_links.txt ]; then
+            echo "No links found! Exiting."
+            exit 1
+          fi
           
           count=0
           while read -r original_url; do
-            # Fix double slashes and convert to lowercase for sorting
-            clean_url=$(echo "$original_url" | sed 's|//|/|g' | sed 's|https:/|https://|g')
+            # Clean the URL
+            clean_url=$(echo "$original_url" | sed 's|:80||g') # Remove port 80 if present
             lower_url=$(echo "$clean_url" | tr '[:upper:]' '[:lower:]')
             
-            # 3. Construct the Wayback Direct Download URL
-            # Using 'id_' tells Wayback to serve the raw file without the toolbar
-            wayback_download_url="https://web.archive.org/web/2026id_/$clean_url"
+            # 3. Construct the Wayback Direct Download URL 
+            # Changed '2026id_' to 'id_' which defaults to the latest available capture
+            wayback_download_url="https://web.archive.org/web/id_/$clean_url"
 
             # 4. Sorting Logic
             if [[ "$lower_url" == *"dr-"* || "$lower_url" == *"resume"* || "$lower_url" == *"profile"* ]]; then
@@ -51,26 +57,35 @@ jobs:
               folder="Others"
             fi
 
-            # 5. Download with custom filename to avoid 404/naming conflicts
-            filename=$(basename "$clean_url")
+            # 5. Download
+            filename=$(basename "$clean_url" | cut -d? -f1) # Remove URL parameters from filename
             
-            echo "Downloading: $filename from Archive..."
-            wget -nv -nc -O "$folder/$filename" "$wayback_download_url" --no-check-certificate || continue
+            echo "Attempting: $filename"
+            # Added --tries and --timeout to prevent hanging
+            wget -nv -nc -O "$folder/$filename" "$wayback_download_url" --no-check-certificate --tries=3 --timeout=10 || continue
             
-            # 6. Size Check (90MB Limit)
+            # 6. Verify and Size Check
             if [ -f "$folder/$filename" ]; then
+              # If the file is just a "Page Not Found" HTML error, delete it
+              if grep -q "<html>" "$folder/$filename" && [[ ! "$filename" == *.html ]]; then
+                echo "Downloaded file was an error page. Removing."
+                rm "$folder/$filename"
+                continue
+              fi
+
               filesize=$(stat -c%s "$folder/$filename")
               if [ $filesize -gt 94371840 ]; then
                 echo "Skipping $filename - Too large!"
                 rm "$folder/$filename"
                 continue
               fi
+              
+              # If we reached here, a real file was saved
+              count=$((count + 1))
             fi
 
-            count=$((count + 1))
-            
-            # 7. Batch Commits (every 50 files)
-            if [ $((count % 50)) -eq 0 ]; then
+            # 7. Batch Commits (every 30 files for better reliability)
+            if [ $count -gt 0 ] && [ $((count % 30)) -eq 0 ]; then
               echo "Pushing batch of $count files..."
               git config user.name "Wayback Bot"
               git config user.email "actions@github.com"
@@ -81,8 +96,12 @@ jobs:
           done < all_links.txt
 
           # Final Sync
-          git config user.name "Wayback Bot"
-          git config user.email "actions@github.com"
-          git add .
-          git commit -m "Final cleanup and upload" || true
-          git push origin main
+          if [ $count -gt 0 ]; then
+            git config user.name "Wayback Bot"
+            git config user.email "actions@github.com"
+            git add .
+            git commit -m "Final cleanup and upload of $count files" || true
+            git push origin main
+          else
+            echo "No files were actually downloaded. Check all_links.txt for valid URLs."
+          fi

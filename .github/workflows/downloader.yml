@@ -1,67 +1,41 @@
 name: Batch Data Scraper
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Manual trigger
+  schedule:
+    - cron: '0 0 * * *' # Auto-trigger daily at midnight
+  push:
+    branches:
+      - main # Optional: triggers every time you push code
 
 jobs:
-  download:
+  scrape:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    
     steps:
-      - name: Checkout Repository
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Fetch and Clean URL List
-        run: |
-          mkdir -p scraped_data
-          echo "Step 1: Fetching URLs from Wayback CDX..."
-          # Get unique URLs, fix double slashes, and remove images
-          curl -s "http://web.archive.org/cdx/search/cdx?url=igceng.com/*&output=text&fl=original" | sort -u > raw.txt
-          grep "^http" raw.txt | sed 's|com//|com/|g' | grep -Ev "\.(jpg|jpeg|png|gif|svg|ico|webp)$" > filtered_urls.txt
-          echo "Cleaned list created."
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
 
-      - name: Wayback Batch Download
+      - name: Install Dependencies
         run: |
-          # Take the top 50 valid links
-          head -n 50 filtered_urls.txt > batch.txt
-          
-          while IFS= read -r url; do
-            [ -z "$url" ] && continue
-            echo "Searching Archive for: $url"
-            
-            # 1. Ask Wayback for the most recent successful snapshot (200 OK)
-            JSON_RESP=$(curl -s "http://archive.org/wayback/available?url=$url")
-            
-            # 2. Extract the actual archived URL using jq
-            # We use '0if_' to get the raw file without the Wayback toolbar
-            ARCHIVE_URL=$(echo $JSON_RESP | jq -r '.archived_snapshots.closest.url // empty' | sed 's/\/web\//\/web\/0if_\//')
+          pip install playwright requests beautifulsoup4
+          playwright install chromium
 
-            if [ ! -z "$ARCHIVE_URL" ] && [ "$ARCHIVE_URL" != "null" ]; then
-              echo "Found Snapshot: $ARCHIVE_URL"
-              # Extract original filename
-              FILENAME=$(basename "$url")
-              # If filename is empty (for root dirs), call it index.html
-              [ -z "$FILENAME" ] && FILENAME="index.html"
-              
-              wget -q -nc --timeout=30 --tries=3 "$ARCHIVE_URL" -O "./scraped_data/$FILENAME" || echo "Download failed"
-            else
-              echo "No snapshot available for $url"
-            fi
-            
-            # Delay to prevent Archive.org rate limiting
-            sleep 2
-          done < batch.txt
+      - name: Run Scraper
+        env:
+          TARGET_URL: "https://joining.indraganesan.org/"
+          USER_EMAIL: ${{ secrets.USER_EMAIL }}
+          USER_PASS: ${{ secrets.USER_PASS }}
+        run: python scraper.py
 
-      - name: Save Data to Repository
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add scraped_data/
-          if git diff --staged --quiet; then
-            echo "No new files."
-          else
-            git commit -m "Batch data recovered from Wayback Archive"
-            git push
-          fi
+      - name: Upload Results
+        if: always() # Upload even if some downloads fail
+        uses: actions/upload-artifact@v4
+        with:
+          name: scraped-batch-data
+          path: output/
+          retention-days: 7

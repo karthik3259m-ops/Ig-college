@@ -1,12 +1,6 @@
 name: Batch Data Scraper
 
-on:
-  workflow_dispatch: # Manual trigger
-  schedule:
-    - cron: '0 0 * * *' # Auto-trigger daily at midnight
-  push:
-    branches:
-      - main # Optional: triggers every time you push code
+
 
 jobs:
   scrape:

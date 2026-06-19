@@ -1,6 +1,4 @@
 name: Organized Batch Scraper (Archive Fix)
-on: [workflow_dispatch]
-
 jobs:
   archive-scrape:
     runs-on: ubuntu-latest
